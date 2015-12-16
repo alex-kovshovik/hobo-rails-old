@@ -24,7 +24,13 @@ export class App extends Component {
 
       <small>Highly opinionated budget organizer</small>
 
+      <h2>Users</h2>
+
       <Users users={this.state.users} />
+
+      <h2>Expenses</h2>
+
+      TO BE ADDED
     </div>);
   }
 }
