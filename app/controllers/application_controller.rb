@@ -1,3 +1,4 @@
 class ApplicationController < ActionController::API
-  before_action :authenticate_user!
+  # TODO: uncomment.
+  #before_action :authenticate_user!
 end

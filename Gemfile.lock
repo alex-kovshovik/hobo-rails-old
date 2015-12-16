@@ -18,6 +18,15 @@ GIT
       json
 
 GIT
+  remote: git://github.com/rails-api/active_model_serializers.git
+  revision: 1301b52696263e5f8ac5904a363b0f28f4dbf397
+  specs:
+    active_model_serializers (0.10.0.rc3)
+      actionpack (>= 4.0)
+      activemodel (>= 4.0)
+      railties (>= 4.0)
+
+GIT
   remote: git://github.com/rails/arel.git
   revision: 3c429c5d86e9e2201c2a35d934ca6a8911c18e69
   specs:
@@ -132,6 +141,7 @@ GEM
       mini_portile2 (~> 2.0.0.rc2)
     orm_adapter (0.5.0)
     pg (0.18.4)
+    rack-cors (0.4.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails-deprecated_sanitizer (1.0.3)
@@ -158,11 +168,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers!
   arel!
   byebug
   devise!
   pg
   rack!
+  rack-cors
   rails!
   sass-rails!
   spring

@@ -7,6 +7,8 @@ gem 'sass-rails', github: "rails/sass-rails"
 gem 'arel', github: "rails/arel"
 gem 'rack', github: "rack/rack"
 gem 'pg'
+gem 'rack-cors'
+gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 
 gem 'devise', github: "plataformatec/devise"
 
