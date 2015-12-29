@@ -7,7 +7,9 @@
     "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js",
     "build": "npm run clean && npm run build:webpack",
     "start": "node devServer.js",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "test": "NODE_ENV=test mocha --recursive --compilers js:babel-core/register --require ./test/setup",
+    "test:watch": "npm test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -42,10 +44,16 @@
     "eslint": "^1.10.3",
     "eslint-plugin-babel": "^3.0.0",
     "eslint-plugin-react": "^3.11.3",
+    "expect": "^1.13.4",
     "express": "^4.13.3",
+    "jsdom": "^7.2.2",
+    "mocha": "^2.3.4",
+    "node-libs-browser": "^0.5.3",
+    "react-addons-test-utils": "^0.14.3",
     "react-transform-catch-errors": "^1.0.0",
     "react-transform-hmr": "^1.0.1",
     "redbox-react": "^1.0.1",
+    "redux-devtools": "^3.0.1",
     "rimraf": "^2.4.3",
     "webpack": "^1.12.9",
     "webpack-dev-middleware": "^1.4.0",
@@ -53,6 +61,9 @@
   },
   "dependencies": {
     "react": "^0.14.3",
-    "react-dom": "^0.14.3"
+    "react-dom": "^0.14.3",
+    "react-redux": "^4.0.6",
+    "redux": "^3.0.5",
+    "redux-thunk": "^1.0.3"
   }
 }
