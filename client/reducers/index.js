@@ -1,8 +1,11 @@
 import { combineReducers } from 'redux'
-import counter from './counter'
+
+import app from './app'
+import expenses from './expenses'
 
 const rootReducer = combineReducers({
-  counter
+  app,
+  expenses
 });
 
 export default rootReducer

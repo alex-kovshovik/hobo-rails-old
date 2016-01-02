@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 
 import { Router, Route, Link, browserHistory } from 'react-router'
 
-import App from './containers/App'
+import Root from './Root'
 import configureStore from './store/configureStore'
 
 import $ from 'jquery';
@@ -15,9 +15,5 @@ window.$ = $;
 const store = configureStore();
 
 render((
-  <Provider store={store}>
-    <Router history={browserHistory}>
-      <Route path="/" component={App} />
-    </Router>
-  </Provider>
+  <Root store={store} />
 ), document.getElementById('root'));
