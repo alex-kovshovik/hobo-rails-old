@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :users
 
   resources :budgets do
-    resources :expenses
+    resources :expenses, only: :index
   end
+
+  resources :expenses
 end

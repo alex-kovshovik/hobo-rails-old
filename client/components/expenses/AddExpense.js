@@ -15,13 +15,13 @@ export default class AddExpense extends Component {
   }
 
   handleSubmit(e) {
-    debugger;
     e.preventDefault();
 
     const {date, amount, budget, comment} = this.refs;
+    const url = "http://localhost:3001/expenses";
 
     if (date && amount && budget) {
-      this.props.addExpense(date.value, amount.value, budget.value, comment.value);
+      this.props.createExpense(url, date.value, amount.value, budget.value, comment.value);
 
       this.resetForm(e);
     }

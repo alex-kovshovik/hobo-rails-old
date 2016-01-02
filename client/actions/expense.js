@@ -1,17 +1,26 @@
 export const ADD_EXPENSE = 'ADD_EXPENSE';
 export const DELETE_EXPENSE = 'DELETE_EXPENSE';
 
-let nextExpenseId = 0;
-
-// TODO: handle updating the expense here as well by adding optional "id" parameter???
-export function addExpense(date, amount, budget, comment) {
+export function addExpense(expense) {
   return {
-    id: nextExpenseId++,
     type: ADD_EXPENSE,
-    date,
-    amount,
-    budget,
-    comment
+    id: expense.id,
+    date: expense.date,
+    amount: expense.amount,
+    budget: expense.budget_id,
+    comment: expense.comment
+  }
+}
+
+export function createExpense(url, date, amount, budget, comment) {
+  return dispatch => {
+    const expenseData = {
+      budget_id: 1, date, amount, comment
+    }
+
+    $.post(url, {expense: expenseData}, (result) => {
+      dispatch(addExpense(result));
+    });
   }
 }
 
