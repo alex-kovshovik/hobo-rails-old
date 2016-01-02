@@ -21,14 +21,16 @@ export default class ExpenseList extends Component {
   render() {
     return (
         <table className="table">
-          <tr>
-            <th>Date</th>
-            <th>Budget</th>
-            <th>Comment</th>
-            <th>Amount</th>
-          </tr>
+          <tbody>
+            <tr>
+              <th>Date</th>
+              <th>Budget</th>
+              <th>Comment</th>
+              <th>Amount</th>
+            </tr>
 
-          {this.props.expenses.map((expense) => <Expense key={expense.id} {...expense} />)}
+            {this.props.expenses.map((expense) => <Expense key={expense.id} {...expense} />)}
+          </tbody>
         </table>
     );
   }

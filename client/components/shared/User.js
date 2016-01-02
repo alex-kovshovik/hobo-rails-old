@@ -4,7 +4,7 @@ export default class User extends Component {
   render() {
     return (
       <div>
-        <b>{this.props.email}</b> created at <b>{this.props.created_at}</b>
+        Welcome <b>{this.props.email}</b>
       </div>
     )
   }
