@@ -16,7 +16,8 @@ class BudgetsController < ApplicationController
 
   # POST /budgets
   def create
-    @budget = current_user.budgets.new(budget_params)
+    @budget = Budget.new(budget_params)
+    @budget.user = User.last # TODO: remove this ugly hard-code after auth is added.
 
     if @budget.save
       render json: @budget, status: :created, location: @budget

@@ -31,11 +31,9 @@ export function addExpense(expense) {
 export function createExpense(url, date, amount, budget, comment) {
   return dispatch => {
     // TODO: unhardcode budget ID.
-    const expenseData = {
-      budget_id: 1, date, amount, comment
-    }
+    const expense = { budget_id: 1, date, amount, comment }
 
-    $.post(url, {expense: expenseData}, (result) => {
+    $.post(url, { expense }, result => {
       dispatch(addExpense(result));
     });
   }
@@ -43,7 +41,7 @@ export function createExpense(url, date, amount, budget, comment) {
 
 export function deleteExpense(id) {
   return {
-    id,
-    type: DELETE_EXPENSE
+    type: DELETE_EXPENSE,
+    id
   }
 }

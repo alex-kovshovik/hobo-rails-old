@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 
 export default class AddExpense extends Component {
   static propTypes = {
-    addExpense: PropTypes.func.isRequired
+    createExpense: PropTypes.func.isRequired
   };
 
   resetForm(e) {

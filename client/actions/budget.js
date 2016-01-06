@@ -6,10 +6,9 @@ export function addBudget(budget) {
   return {
     type: ADD_BUDGET,
     id: budget.id,
-    date: budget.date,
+    name: budget.name,
     amount: budget.amount,
-    budget: budget.budget_id,
-    comment: budget.comment
+    mode: budget.mode
   }
 }
 
@@ -28,21 +27,19 @@ export function loadBudgets(url) {
   }
 }
 
-//export function createBudget(url, date, amount, budget, comment) {
-//  return dispatch => {
-//    const expenseData = {
-//      budget_id: 1, date, amount, comment
-//    }
-//
-//    $.post(url, {expense: expenseData}, (result) => {
-//      dispatch(addExpense(result));
-//    });
-//  }
-//}
-//
-//export function deleteExpense(id) {
-//  return {
-//    id,
-//    type: DELETE_EXPENSE
-//  }
-//}
+export function createBudget(url, name, amount, mode) {
+  return dispatch => {
+    const budget = { name, amount, mode }
+
+    $.post(url, { budget }, result => {
+      dispatch(addBudget(result));
+    });
+  }
+}
+
+export function deleteExpense(id) {
+  return {
+    type: DELETE_BUDGET,
+    id
+  }
+}
