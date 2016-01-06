@@ -1,4 +1,4 @@
-import { ADD_EXPENSE, DELETE_EXPENSE } from '../actions/expense'
+import { SET_EXPENSES, ADD_EXPENSE, DELETE_EXPENSE } from '../actions/expense'
 
 const expense = (state = {}, action) => {
   switch(action.type) {
@@ -17,10 +17,12 @@ const expense = (state = {}, action) => {
 
 const expenses = (state =[], action) => {
   switch (action.type) {
+    case SET_EXPENSES:
+      return action.expenses;
     case ADD_EXPENSE:
       return [...state, expense(undefined, action)];
     case DELETE_EXPENSE: {
-      console.log("TODO: unimplemented.")
+      console.log("TODO: not implemented.")
       return state;
     }
     default:

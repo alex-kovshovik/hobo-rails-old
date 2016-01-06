@@ -22,6 +22,12 @@ module.exports = {
       loaders: ['babel'],
       include: path.join(__dirname, '.'),
       exclude: path.join(__dirname, 'node_modules')
+    },
+    {
+      test: /\.css$/,
+      loaders: ['style', 'css'],
+      include: path.join(__dirname, '.'),
+      exclude: path.join(__dirname, 'node_modules')
     }]
   }
 };

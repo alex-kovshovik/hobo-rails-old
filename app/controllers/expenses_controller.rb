@@ -3,6 +3,7 @@ class ExpensesController < ApplicationController
 
   # GET /expenses
   def index
+    # TODO: change after authentication is implemented.
     @expenses = Expense.all
 
     render json: @expenses

@@ -1,31 +1,29 @@
 import React, { Component } from 'react'
 
-class Expense extends Component {
+class Budget extends Component {
   render() {
     return (
         <tr>
-          <td>{this.props.date}</td>
-          <td>{this.props.budget}</td>
-          <td>{this.props.comment}</td>
+          <td>{this.props.name}</td>
           <td>{this.props.amount}</td>
+          <td>{this.props.mode == 'normal' ? '' : this.props.mode}</td>
         </tr>
     )
   }
 }
 
-export default class ExpenseList extends Component {
+export default class BudgetList extends Component {
   render() {
     return (
         <table className="table table-striped table-hover">
           <tbody>
             <tr>
-              <th>Date</th>
               <th>Budget</th>
-              <th>Comment</th>
               <th>Amount</th>
+              <th>Type</th>
             </tr>
 
-            {this.props.expenses.map(expense => <Expense key={expense.id} {...expense} />)}
+            {this.props.budgets.map(budget => <Budget key={budget.id} {...budget} />)}
           </tbody>
         </table>
     );

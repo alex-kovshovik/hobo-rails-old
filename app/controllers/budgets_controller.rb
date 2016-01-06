@@ -3,7 +3,8 @@ class BudgetsController < ApplicationController
 
   # GET /budgets
   def index
-    @budgets = current_user.budgets.all
+    # TODO: change after authentication is added.
+    @budgets = Budget.all
 
     render json: @budgets
   end

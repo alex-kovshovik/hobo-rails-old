@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-
-export default class User extends Component {
-  render() {
-    return (
-      <div>
-        Welcome <b>{this.props.email}</b>
-      </div>
-    )
-  }
-}
+//import React, { Component } from 'react';
+//
+//export default class User extends Component {
+//  render() {
+//    return (
+//      <div>
+//        Welcome <b>{this.props.email}</b>
+//      </div>
+//    )
+//  }
+//}
 
 //class NewUser extends Component {
 //  render() {

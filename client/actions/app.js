@@ -9,7 +9,7 @@ export function setUser(user) {
 
 export function loadUser(url) {
   return dispatch => {
-    $.get(url, (result) => {
+    $.get(url, result => {
       dispatch(setUser(result));
     });
   }

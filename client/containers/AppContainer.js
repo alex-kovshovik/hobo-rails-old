@@ -3,17 +3,13 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import User from '../components/shared/User'
-import ExpenseList from '../components/expenses/List'
-import AddExpenseContainer from './AddExpenseContainer'
-import DevTools from './DevTools'
+import GlobalNav from '../components/shared/GlobalNav'
 
 import * as AppActions from '../actions/app'
 
 function mapStateToProps(state) {
   return {
-    user: state.app.user,
-    expenses: state.expenses
+    user: state.app.user
   }
 }
 
@@ -30,32 +26,12 @@ class AppContainer extends Component {
   }
 
   render() {
-    const { user, expenses } = this.props;
+    const { user } = this.props;
 
     return (<div>
-      <DevTools />
+      <GlobalNav {...user} location={this.props.location} />
 
-      <div className="row">
-        <div className="col-md-8">
-          <h1>Welcome to HOBO</h1>
-
-          Highly opinionated budget organizer
-        </div>
-
-        <User className="col-md-4" {...user} />
-      </div>
-
-      <div className="row">
-        <div className="col-md-4">
-          <h3>Log expense</h3>
-          <AddExpenseContainer />
-        </div>
-
-        <div className="col-md-8">
-          <h3>Expenses</h3>
-          <ExpenseList expenses={expenses} />
-        </div>
-      </div>
+      {this.props.children}
     </div>);
   }
 }
