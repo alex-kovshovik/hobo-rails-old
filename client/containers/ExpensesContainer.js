@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import ExpenseList from '../components/expenses/List'
-import AddExpenseContainer from './AddExpenseContainer'
+import AddExpense from '../components/expenses/AddExpense'
 
 import * as ExpenseActions from '../actions/expense'
 
@@ -39,7 +39,7 @@ class ExpensesContainer extends Component {
       <div className="row">
         <div className="col-md-4">
           <h3>Log expense</h3>
-          <AddExpenseContainer />
+          <AddExpense createExpense={this.props.createExpense} />
         </div>
 
         <div className="col-md-8">

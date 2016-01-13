@@ -3,7 +3,8 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import GlobalNav from '../components/shared/GlobalNav'
+import GlobalNav from '../components/GlobalNav'
+import AuthenticatedContainer from './AuthenticatedContainer'
 
 import * as AppActions from '../actions/app'
 
@@ -31,7 +32,9 @@ class AppContainer extends Component {
     return (<div>
       <GlobalNav {...user} location={this.props.location} />
 
-      {this.props.children}
+      <AuthenticatedContainer {...user}>
+        {this.props.children}
+      </AuthenticatedContainer>
     </div>);
   }
 }

@@ -1,5 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router'
+import activeComponent from 'react-router-active-component'
+
+import AuthenticatedContainer from '../containers/AuthenticatedContainer'
+
+const NavLink = activeComponent('li')
 
 export default class GlobalNav extends Component {
   render() {
@@ -17,12 +22,15 @@ export default class GlobalNav extends Component {
           </div>
 
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul className="nav navbar-nav">
-              <li className={this.props.location.pathname == '/expenses' ? 'active' : ''}><Link to="/expenses" activeClassName="active">Expenses <span className="sr-only">(current)</span></Link></li>
-              <li className={this.props.location.pathname == '/budgets' ? 'active' : ''}><Link to="/budgets" activeClassName="active">Budgets</Link></li>
-            </ul>
+            <AuthenticatedContainer email={this.props.email}>
+              <ul className="nav navbar-nav">
+                <NavLink to="expenses">Expenses <span className="sr-only">(current)</span></NavLink>
+                <NavLink to="budgets" activeClassName="active">Budgets</NavLink>
+              </ul>
+            </AuthenticatedContainer>
             <ul className="nav navbar-nav navbar-right">
-              <li><p className="navbar-text">Signed in as <b>{this.props.email}</b></p></li>
+              <li><Link to="/signup">Sign Up</Link></li>
+              <li><p className="navbar-text">Welcome, <b>{this.props.email}</b></p></li>
               <li><button type="button" className="btn btn-default navbar-btn">Logout</button></li>
             </ul>
           </div>

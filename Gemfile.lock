@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/plataformatec/devise.git
-  revision: 1d77099861e2082a6bf5ef9c3a422c2ec315adb2
+  revision: a321282ccc93d73f9d0f7a1319d3fcab27d25b20
   specs:
     devise (3.5.3)
       bcrypt (~> 3.0)
@@ -11,14 +11,14 @@ GIT
 
 GIT
   remote: git://github.com/rack/rack.git
-  revision: 7cb3772a03f1b713622f68e178f90a71a66aff0d
+  revision: 545532b01d332325c913808b7c2047a9256ed551
   specs:
     rack (2.0.0.alpha)
       json
 
 GIT
   remote: git://github.com/rails-api/active_model_serializers.git
-  revision: 7bc66c53342540a5a6e9506abdbc04db0c2c966d
+  revision: d466466660953a2d4fd1630e7fde2d2baafd97a9
   specs:
     active_model_serializers (0.10.0.rc3)
       actionpack (>= 4.0)
@@ -27,13 +27,13 @@ GIT
 
 GIT
   remote: git://github.com/rails/arel.git
-  revision: ac39cb2c3202bca26a9a98d608b52146eaf3b3f5
+  revision: 63ea665c8083f8069a0d05d4f15cf19e08e470a6
   specs:
     arel (7.0.0)
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: 904e3f4465cb2b874bd99000e96e2e6e0e03844c
+  revision: 7b7b12f5983fd0c48e4a8dad909d3388b72f046c
   specs:
     actioncable (5.0.0.beta1)
       actionpack (= 5.0.0.beta1)
@@ -67,7 +67,6 @@ GIT
       globalid (>= 0.3.6)
     activemodel (5.0.0.beta1)
       activesupport (= 5.0.0.beta1)
-      builder (~> 3.1)
     activerecord (5.0.0.beta1)
       activemodel (= 5.0.0.beta1)
       activesupport (= 5.0.0.beta1)
@@ -100,7 +99,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/sass-rails.git
-  revision: 6e4eee736bcbfa5b2962467673c7a51abf434c67
+  revision: a11d4c7989a2b3e82b780e4c363c7e5d28c4b739
   specs:
     sass-rails (6.0.0)
       railties (>= 4.0.0, < 5.0)
@@ -110,7 +109,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/sprockets-rails.git
-  revision: 419958f24fb4ce2d4c86f68f87c5a76767f3aa88
+  revision: 9ef1ac55b5c22a77bec2552f175bd02f574084a0
   specs:
     sprockets-rails (3.0.0)
       actionpack (>= 4.0)
@@ -119,7 +118,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/sprockets.git
-  revision: f528cca855f364b79f9f0aaf919a65eca3acc483
+  revision: d76aeabbf942e476e5d7dc4b1193b265b5c16f95
   specs:
     sprockets (4.0.0)
       concurrent-ruby (~> 1.0)
@@ -194,12 +193,12 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.2)
       loofah (~> 2.0)
-    rake (10.4.2)
+    rake (10.5.0)
     redis (3.2.2)
     responders (2.1.1)
       railties (>= 4.2.0, < 5.1)
-    sass (3.4.20)
-    spring (1.6.1)
+    sass (3.4.21)
+    spring (1.6.2)
     thor (0.19.1)
     thread_safe (0.3.5)
     timers (4.1.1)
